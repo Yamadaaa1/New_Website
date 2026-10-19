@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabular Data</title>
+    <script src="members.js" defer></script>
+</head>
+<style>
+    body {
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        table {
+            width: 100%;
+            max-width: 800px;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        /* Header styling based on your preference */
+        thead {
+            background-color: #e2a1a1;
+            color: black;
+            font-size: 13px;
+        }
+
+        th, td {
+            padding: 16px 20px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+            border: 1px solid #eee;
+        }
+
+        tbody tr {
+            transition: background-color 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background-color: #fdf5f5;
+        }
+
+        tbody td img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #e2a1a1;
+        }
+</style>
+<body>
+    <table border="2">
+        <thead>
+            <tr>
+                <th>NAME</th>
+                <th>AGE</th>
+                <th>ROLE</th>
+                <th>S NUMBER</th>
+                <th>IMAGE</th>
+            </tr>
+        </thead>
+        <tbody id="output">
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,170 @@
+[
+  {
+    "name": "Yoon SeoYeon",
+    "age": 23,
+    "role": "Leader / Sub-Vocalist",
+    "Snumber": "S1",
+    "image": "image/seoyeon.jfif"
+  },
+  {
+    "name": "Jeong HyeRin",
+    "age": 19,
+    "role": "Main Dancer / Sub-Vocalist",
+    "Snumber": "S2",
+    "image": "image/hyerin.jfif"
+  },
+  {
+    "name": "Lee JiWoo",
+    "age": 20,
+    "role": "Main Vocalist",
+    "Snumber": "S3",
+    "image": "image/jiwo.jfif"
+  },
+  {
+    "name": "Kim ChaeYeon",
+    "age": 21,
+    "role": "Sub-Vocalist / Center",
+    "Snumber": "S4",
+    "image": "image/chaeyeon.jfif"
+  },
+  {
+    "name": "Kim YooYeon",
+    "age": 25,
+    "role": "Sub-Vocalist / Visual",
+    "Snumber": "S5",
+    "image": "image/yooyeon.jfif"
+  },
+  {
+    "name": "Kim SooMin",
+    "age": 19,
+    "role": "Sub-Vocalist",
+    "Snumber": "S6",
+    "image": "image/soomin.jfif"
+  },
+  {
+    "name": "Kim NaKyoung",
+    "age": 24,
+    "role": "Lead Vocalist / Lead Dancer",
+    "Snumber": "S7",
+    "image": "image/nakyoung.jfif"
+  },
+  {
+    "name": "Gong YuBin",
+    "age": 21,
+    "role": "Main Vocalist",
+    "Snumber": "S8",
+    "image": "image/yubin.jfif"
+  },
+  {
+    "name": "Kaede",
+    "age": 20,
+    "role": "Main Dancer / Vocalist",
+    "Snumber": "S9",
+    "image": "image/kaede.jfif"
+  },
+  {
+    "name": "SeoDaHyun",
+    "age": 22,
+    "role": "Main Vocalist",
+    "Snumber": "S10",
+    "image": "image/dahyun.jfif"
+  },
+  {
+    "name": "Kotone",
+    "age": 22,
+    "role": "Main Rapper / Dancer",
+    "Snumber": "S11",
+    "image": "image/kotone.jfif"
+  },
+  {
+    "name": "Kwak YeonJi",
+    "age": 18,
+    "role": "Sub-Vocalist / Dancer",
+    "Snumber": "S12",
+    "image": "image/yeonji.jfif"
+  },
+  {
+    "name": "Nien",
+    "age": 23,
+    "role": "Lead Rapper / Vocalist / Dancer",
+    "Snumber": "S13",
+    "image": "image/nien.jfif"
+  },
+  {
+    "name": "Park SoHyun",
+    "age": 24,
+    "role": "Lead Vocalist / Producer",
+    "Snumber": "S14",
+    "image": "image/sohyun.jfif"
+  },
+  {
+    "name": "Xinyu",
+    "age": 24,
+    "role": "Lead Rapper / Vocalist",
+    "Snumber": "S15",
+    "image": "image/xinyu.jfif"
+  },
+  {
+    "name": "Mayu",
+    "age": 24,
+    "role": "Main Vocalist",
+    "Snumber": "S16",
+    "image": "image/mayu.jfif"
+  },
+  {
+    "name": "Lynn",
+    "age": 20,
+    "role": "Main Dancer / Vocalist",
+    "Snumber": "S17",
+    "image": "image/lynn.jfif"
+  },
+  {
+    "name": "JooBin",
+    "age": 17,
+    "role": "Sub-Vocalist",
+    "Snumber": "S18",
+    "image": "image/joobin.jfif"
+  },
+  {
+    "name": "Jeong HaYeon",
+    "age": 19,
+    "role": "Lead Vocalist / Dancer",
+    "Snumber": "S19",
+    "image": "image/hayeon.jfif"
+  },
+  {
+    "name": "Park ShiOn",
+    "age": 20,
+    "role": "Main Vocalist",
+    "Snumber": "S20",
+    "image": "image/shion.jfif"
+  },
+  {
+    "name": "Kim ChaeWon",
+    "age": 19,
+    "role": "Main Vocalist / Lead Dancer",
+    "Snumber": "S21",
+    "image": "image/chaewon.jfif"
+  },
+  {
+    "name": "Sullin ",
+    "age": 19,
+    "role": "Sub-Vocalist / Visual",
+    "Snumber": "S22",
+    "image": "image/sullin.jfif"
+  },
+  {
+    "name": "SeoAh",
+    "age": 16,
+    "role": "Sub-Vocalist / Maknae",
+    "Snumber": "S23",
+    "image": "image/seoah.jfif"
+  },
+  {
+    "name": "JiYeon",
+    "age": 22,
+    "role": "Main Dancer / Vocalist",
+    "Snumber": "S24",
+    "image": "image/jiyeon.jfif"
+  }
+]
