@@ -7,16 +7,37 @@
     <link rel="stylesheet" href="menuStyle.css">
     <style>
     #links{
-            width: 200px;
+            width: 90%;
             display: block;
             margin: 10px auto;
             color: #2980b9;
             text-decoration: none;
             font-weight: bold;
-            padding: 8px;
+            padding: 10px;
             border: 2px solid #2980b9;
             border-radius: 4px;
+            text-align: center;
         }
+    .box{
+        color:black;
+        font-size: 1.5rem;
+    }
+    .container{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            gap: 1em;
+    }
+    *{
+        margin:0px;
+        padding:0px;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: antiquewhite;
+        font-family: 'Times New Roman', Times, serif;
+        min-height: 100px;
+    }
         </style>
 </head>
 <body>
@@ -29,15 +50,17 @@
     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li> 
     </ul> 
         </nav>
-    <center>
-     <a href="input_field.html" id="links"><h3>Form Element</h3></a> 
-     <a href="PT2.html" id="links"><h3>Portal Login</h3></a>  
-     <a href="schedule.html" id="links"><h3>Schedule</h3></a>
-     <a href="myFirstjavaScript.html" id="links"><h3>JavaScript</h3></a>  
-     <a href="Calculator.html" id="links"><h3>Sample Calculator</h3></a>  
-     <a href="discount.html" id="links"><h3>Discount Calculator</h3></a>
-     <a href="activity.html" id="links"><h3>.Net Developer Profile</h3></a>
-     <a href="JavaScriptTables/index.html"id="links"><h3>Classmate tables</h3>
-    </center>
+    
+    <main class="container">
+     <a href="input_field.html" id="links" class="box"><h3>Form Element</h3></a> 
+     <a href="PT2.html" id="links" class="box"><h3>Portal Login</h3></a>  
+     <a href="schedule.html" id="links" class="box"><h3>Schedule</h3></a>
+     <a href="myFirstjavaScript.html" id="links" class="box"><h3>JavaScript</h3></a>  
+     <a href="Calculator.html" id="links" class="box"><h3>Sample Calculator</h3></a>  
+     <a href="discount.html" id="links" class="box"><h3>Discount Calculator</h3></a>
+     <a href="activity.html" id="links" class="box"><h3>.Net Developer Profile</h3></a>
+     <a href="JavaScriptTables/index.html" id="links" class="box"><h3>Classmate tables</h3></a>
+    </main>
+    
 </body>
 </html>
