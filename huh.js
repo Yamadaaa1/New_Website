@@ -1,7 +1,7 @@
 function compareLogin(event){
     event.preventDefault();
 
-    const USERNAME = "juju";
+    const USERNAME = "jethro";
     const PASSWORD = "1234";
     const userName = document.getElementById("username").value;
     const passWord = document.getElementById("password").value;
