@@ -1,0 +1,53 @@
+
+h1 {
+    text-align: center;
+    color: #B71C1C;
+}
+
+.draggableContainer {
+    text-align: center;
+    border: 1px solid #E53935;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.box {
+    background-color: #B71C1C;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 120px;
+    margin-right: 5px;
+    cursor: grab;
+    color: #FFFFFF;
+}
+
+.droppableContainer {
+    text-align: center;
+    border: 1px solid #E53935;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.droppable {
+    background-color: #C62828;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 120px;
+    margin-right: 5px;
+    color: #FFFFFF;
+}
+
+.draggableFormat {
+    font-weight: bold;
+    color: #B71C1C;
+    border: 5px dotted #E53935;
+}
+
+h1 {
+    color: #B71C1C;
+}
