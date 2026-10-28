@@ -87,6 +87,8 @@
         background-color: #ffebee;
         color: #5d4037;
         font-family: "Segoe UI", sans-serif;
+        bottom: 0;
+        position: fixed;
       }
 
       .footer-content {
