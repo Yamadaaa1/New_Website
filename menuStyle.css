@@ -83,3 +83,55 @@
     /* line sa ilalim para ma highlight yung active na link */
     border-bottom: 4px solid #FFEBEE;
 }
+.footer {
+        background-color: #ffebee;
+        color: #5d4037;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      .footer-content {
+        display: flex;
+        justify-content: space-around;
+        padding: 20px 8%;
+        height: 190px;
+      }
+
+      .footer-text {
+        width: 50%;
+      }
+
+      .footer-text p {
+        margin: 10px 15px;
+        font-size: 12px;
+      }
+
+      .footer-social {
+        text-align: center;
+        padding-top: 25px;
+      }
+
+      .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        margin-top: 15px;
+      }
+
+      .social-links a {
+        color: #b71c1c;
+        font-size: 25px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .social-links a:hover {
+        color: #e53935;
+      }
+
+      .footer-bottom {
+        background-color: #b71c1c;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 12px;
+      }
