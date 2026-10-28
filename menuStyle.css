@@ -6,6 +6,9 @@
     width: 100%;
     /* para may shadow design yung nav bar*/
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    top: 0;
+    position: absolute;
+    left: 0;
 }
 /* yung mga nakalagay sa nav bar */
 .nav-list {
@@ -88,7 +91,9 @@
         color: #5d4037;
         font-family: "Segoe UI", sans-serif;
         bottom: 0;
-        position: fixed;
+        position:absolute;
+        width: 100%;
+        left: 0;
       }
 
       .footer-content {
