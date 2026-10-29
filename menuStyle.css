@@ -6,14 +6,13 @@ body{
 }
 /* Nilalagay sa taas yung mga link sa navigation */
 .navbar {
-    /* Bg Color */
-    background-color: #B71C1C; /* Maroon / Deep Red Base */
-    /* para 100% ng webpage */
+    background-color: #B71C1C;
     width: 100%;
-    /* para may shadow design yung nav bar*/
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    top: 0;
-    left: 0;
+    position: fixed;
+    top: 0;   /* Idagdag ito para dumikit sa pinakataas */
+    left: 0;  /* Idagdag ito para walang gap sa kaliwa */
+    z-index: 1000; /* Para sigurong laging nasa ibabaw ng ibang content */
 }
 /* yung mga nakalagay sa nav bar */
 .nav-list {
