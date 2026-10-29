@@ -9,10 +9,8 @@ body{
     background-color: #B71C1C;
     width: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: fixed;
     top: 0;   /* Idagdag ito para dumikit sa pinakataas */
     left: 0;  /* Idagdag ito para walang gap sa kaliwa */
-    z-index: 1000; /* Para sigurong laging nasa ibabaw ng ibang content */
 }
 /* yung mga nakalagay sa nav bar */
 .nav-list {
