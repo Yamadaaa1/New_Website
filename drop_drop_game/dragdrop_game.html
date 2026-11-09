@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AA Trait Tier List</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #222;
+        color: white;
+        padding: 10px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      .tier-container {
+        display: flex;
+        width: 100%;
+        height: 100px;
+        border: 2px solid #444;
+        margin-bottom: 8px;
+        background-color: #333;
+      }
+
+      .tier-name {
+        width: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        font-weight: bold;
+        color: black;
+      }
+
+      .tier-items {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1px;
+        flex: 1;
+        min-height: 80px;
+      }
+
+      .S {
+        background-color: #ff6666;
+      }
+      .A {
+        background-color: #ffad66;
+      }
+      .B {
+        background-color: #ffff66;
+      }
+      .C {
+        background-color: #a5e66b;
+      }
+      .D {
+        background-color: #66ccff;
+      }
+      .E {
+        background-color: #9999ff;
+      }
+      .F {
+        background-color: #cc99ff;
+      }
+
+      .trait {
+        width: 70px;
+        background-color: #444;
+        border: 1px solid #777;
+        text-align: center;
+        padding: 5px;
+        cursor: grab;
+        user-select: none;
+      }
+
+      .trait:active {
+        cursor: grabbing;
+      }
+
+      .trait-image {
+        width: 60px;
+        height: 40px;
+        background-color: #666;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        color: white;
+        font-size: 12px;
+      }
+
+      .trait img {
+        width: 50px;
+        height: 55px;
+        object-fit: contain;
+      }
+
+      .trait p {
+        margin: 5px 0;
+        font-size: 13px;
+      }
+
+      .trait-pool {
+        border: 2px solid #555;
+        background-color: #333;
+        padding: 15px;
+        margin-top: 25px;
+      }
+
+      .trait-pool h2 {
+        text-align: center;
+      }
+
+      .trait-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        min-height: 100px;
+      }
+
+      button {
+        padding: 10px 20px;
+        margin-top: 15px;
+        cursor: pointer;
+      }
+    </style>
+
+    <script src="dragdropfuction.js" defer></script>
+  </head>
+
+  <body>
+    <h1>Anime Adventures Trait Tier List</h1>
+
+    <p style="text-align: center">
+      Drag and drop the traits into your preferred tier.
+    </p>
+
+    <div class="tier-container">
+      <div class="tier-name S">S</div>
+      <div class="tier-items"></div>
+    </div>
+
+    <div class="tier-container">
+      <div class="tier-name A">A</div>
+      <div class="tier-items"></div>
+    </div>
+
+    <div class="tier-container">
+      <div class="tier-name B">B</div>
+      <div class="tier-items"></div>
+    </div>
+
+    <div class="tier-container">
+      <div class="tier-name C">C</div>
+      <div class="tier-items"></div>
+    </div>
+
+    <div class="tier-container">
+      <div class="tier-name D">D</div>
+      <div class="tier-items"></div>
+    </div>
+
+    <div class="tier-container">
+      <div class="tier-name E">E</div>
+      <div class="tier-items"></div>
+    </div>
+
+    <div class="tier-container">
+      <div class="tier-name F">F</div>
+      <div class="tier-items"></div>
+    </div>
+
+    <div class="trait-pool">
+      <h2>Traits</h2>
+
+      <div class="trait-list" id="traitList">
+            <div class="trait" draggable="true" id="unique">
+                <img src="images/Trait_Unique.webp" alt="Unique" />
+                <p>Unique</p>
+            </div>
+
+            <div class="trait" draggable="true" id="golden">
+                <img src="images/Trait_Golden.webp" alt="Golden" />
+                <p>Golden</p>
+            </div>
+
+            <div class="trait" draggable="true" id="divine">
+                <img src="images/Trait_Divine.webp" alt="Divine" />
+                <p>Divine</p>
+            </div>
+
+            <div class="trait" draggable="true" id="celestial">
+                <img src="images/Trait_Celestial.webp" alt="Celestial" />
+                <p>Celestial</p>
+            </div>
+
+            <div class="trait" draggable="true" id="reaper">
+                <img src="images/Trait_Reaper.webp" alt="Reaper" />
+                <p>Reaper</p>
+            </div>
+
+            <div class="trait" draggable="true" id="godspeed">
+                <img src="images/Trait_Godspeed.webp" alt="Godspeed" />
+                <p>Godspeed</p>
+            </div>
+
+            <div class="trait" draggable="true" id="sniper">
+                <img src="images/Trait_Sniper.webp" alt="Sniper" />
+                <p>Sniper</p>
+            </div>
+
+            <div class="trait" draggable="true" id="culling">
+                <img src="images/Trait_Culling.webp" alt="Culling" />
+                <p>Culling</p>
+            </div>
+
+            <div class="trait" draggable="true" id="adept">
+                <img src="images/Trait_Adept.webp" alt="Adept" />
+                <p>Adept</p>
+            </div>
+
+            <div class="trait" draggable="true" id="superior">
+                <img src="images/Trait_Superior.webp" alt="Superior III" />
+                <p>Superior III</p>
+            </div>
+      </div>
+    </div>
+
+    <center>
+      <button id="resetButton">Reset Tier List</button>
+    </center>
+  </body>
+</html>
