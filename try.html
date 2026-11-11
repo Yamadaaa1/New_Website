@@ -1,97 +1,168 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+    <style>
+      body {
+        background-color: #ffebee;   /*hmmmmm*/                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           /*made by jethro rosales*/
+        padding: 20px;
+        margin: 20px;
+      }
 
-<body>
-    <h1>Student Information</h1>
-    <label>Lrn</label>
-    <input type="text" id="lrn" name="lrn" maxlength="11" required>
+     h1 {
+        color: #b71c1c;
+        text-align: center;
+      }
 
-    <label>Name</label>
-    <input type="text" id="name" name="name" required>
+      button {
+        background-color: #b71c1c;
+        color: white;
+        border: none;
+        padding: 8px;
+        border-radius: 40px;
+      }
 
-    <label>Subject</label>
-    <input type="text" id="subject" name="subject" required>
+      table {
+        background-color: white;
+        width: 100%;
+        border-collapse: collapse;
+      }
 
-    <label>Grade</label>
-    <input type="number" id="grade" name="grade" min="0" max="100" required>
-    <button id="submit" onclick="saveGrade()">Save</button>
-    
-    <p id="message"></p>
-    <br>
-    <table border="1">
+      th {
+        background-color: #b71c1c;
+        color: white;
+      }
+
+      th,td {
+        padding: 8px;
+        border: 1px solid #b71c1c;
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+      <h1>Student Information</h1>
+      <center>
+      <label>Lrn</label>
+      <input type="text" id="lrn" name="lrn" maxlength="11" required />
+
+      <label>Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label>Subject</label>
+      <input type="text" id="subject" name="subject" required />
+
+      <label>Grade</label>
+      <input type="number" id="grade" name="grade" min="0" max="100" required />
+      <button id="submit" onclick="saveGrade()">Save</button>
+      </center>
+      <p id="message"></p>
+      <br />
+      <table border="1">
         <thead>
-            <tr>
-                <th>Lrn</th>
-                <th>Name</th>
-                <th>Subject</th>
-                <th>Grade</th>
-            </tr>
+          <tr>
+            <th>Lrn</th>
+            <th>Name</th>
+            <th>Subject</th>
+            <th>Grade</th>
+            <th>Action</th>
+          </tr>
         </thead>
-        <tbody id="table-body">
-        </tbody>
-    </table>
+        <tbody id="table-body"></tbody>
+      </table>
 
     <script>
-        const lrnInput = document.getElementById('lrn');
-        const nameInput = document.getElementById('name');
-        const subjectInput = document.getElementById('subject');
-        const gradeInput = document.getElementById('grade');
+      const lrnInput = document.getElementById("lrn");
+      const nameInput = document.getElementById("name");
+      const subjectInput = document.getElementById("subject");
+      const gradeInput = document.getElementById("grade");
+      const message = document.getElementById("message");
+      const tableBody = document.getElementById("table-body");
+      const btnSave = document.getElementById("submit");
+      var grades = JSON.parse(localStorage.getItem("grades")) || [];
+      var selectedIndex = -1;
 
-        var grades = JSON.parse(localStorage.getItem('grades')) || [];
+      function showGrades() {
+        tableBody.textContent = "";
+        for (var i = 0; i < grades.length; i++) {
+          var row = tableBody.insertRow();
+          row.insertCell(0).textContent = grades[i].lrn;
+          row.insertCell(1).textContent = grades[i].name;
+          row.insertCell(2).textContent = grades[i].subject;
+          row.insertCell(3).textContent = grades[i].grade;
 
-        function showGrades() {
-            const tableBody = document.getElementById('table-body');
-            tableBody.textContent = "";
-            for (var i = 0; i < grades.length; i++) {
-                var row = tableBody.insertRow();
-                row.insertCell(0).textContent = grades[i].lrn;
-                row.insertCell(1).textContent = grades[i].name;
-                row.insertCell(2).textContent = grades[i].subject;
-                row.insertCell(3).textContent = grades[i].grade;
-            }
+          var actionCell = row.insertCell();
+          actionCell.appendChild(makeUpdateButton(i));
+        }
+      }
+
+      function makeUpdateButton(index) {
+        var button = document.createElement("button");
+        button.textContent = "Update";
+        button.addEventListener("click", function () {
+          loadForUpdate(index);
+        });
+        return button;
+      }
+      function loadForUpdate(index) {
+        selectedIndex = index;
+        lrnInput.value = grades[index].lrn;
+        nameInput.value = grades[index].name;
+        subjectInput.value = grades[index].subject;
+        gradeInput.value = grades[index].grade;
+        btnSave.textContent = "Update Grade";
+        message.textContent =
+          "Change the values, then click 'Update Grade' button above the table";
+      }
+
+      function saveGrade() {
+        var lrn = lrnInput.value.trim();
+        var name = nameInput.value.trim();
+        var subject = subjectInput.value.trim();
+        var grade = gradeInput.value.trim();
+
+        if (lrn === "" || name === "" || subject === "" || grade === "") {
+          message.textContent = "Please fill in all the boxes";
+          return;
         }
 
-        function saveGrade() {
-            var lrn = lrnInput.value.trim();
-            var name = nameInput.value.trim();
-            var subject = subjectInput.value.trim();
-            var grade = gradeInput.value.trim();
+        var record = {
+          lrn: lrn,
+          name: name,
+          subject: subject,
+          grade: grade,
+        };
 
-            if (lrn === "" || name === "" || subject === "" || grade === "") {
-                alert("Please fill in all fields.");
-                return;
-            }
-
-            var record = {
-                lrn: lrn,
-                name: name,
-                subject: subject,
-                grade: grade
-            };
-
-            grades.push(record);
-            localStorage.setItem('grades', JSON.stringify(grades));
-            
-            const message = document.getElementById('message');
-            message.textContent = "Grade saved successfully!";
-
-            lrnInput.value = "";
-            nameInput.value = "";
-            subjectInput.value = "";
-            gradeInput.value = "";
-
-            showGrades();
+        if (selectedIndex === -1) {
+          grades.push(record);
+          message.textContent = "Saved";
+        } else {
+          grades[selectedIndex] = record;
+          message.textContent = "Updated";
+          grades[selectedIndex] = record;
+          message.textContent = "Updated";
+          selectedIndex = -1;
+          btnSave.value = "Save";
         }
+
+        localStorage.setItem("grades", JSON.stringify(grades));
+
+        message.textContent = "Grade saved successfully!";
+
+        lrnInput.value = "";
+        nameInput.value = "";
+        subjectInput.value = "";
+        gradeInput.value = "";
 
         showGrades();
-        localStorage.clear();
-    </script>
-</body>
+      }
 
+      showGrades();
+      localStorage.clear();
+    </script>
+  </body>
 </html>
