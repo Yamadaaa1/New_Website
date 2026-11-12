@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery UI Tabs - Default functionality</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.js"></script>
+    <style>
+        .ui-tabs .ui-tabs-nav li {
+    background: #e0e0e0 !important;
+    border-color: #cccccc !important;
+}
+.ui-tabs .ui-tabs-nav li a {
+    color: #333333 !important;
+}
+
+/* Change color of the ACTIVE (selected) tab */
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+    background: #bd9daf !important; /* Blue background */
+    border-color: #8e9398 !important;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active a {
+    color: #ffffff !important; /* White text */
+}
+
+/* Change color when HOVERING over a tab */
+.ui-tabs .ui-tabs-nav li.ui-state-hover {
+    background: #700647 !important;
+    border-color: #5e0439 !important;
+}
+.ui-tabs .ui-tabs-nav li.ui-state-hover a {
+    color: #ffffff !important;
+}
+    </style>
+</head>
+<body>
+    <div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">Adolf Hitler</a></li>
+    <li><a href="#tabs-2">Benjamin Netanyahu</a></li>
+    <li><a href="#tabs-3">Jeffrey Epstein</a></li>
+  </ul>
+  <div id="tabs-1">
+    <p>Adolf Hitler was an Austrian-born German politician who was dictator of Germany in the Nazi era from 1933 until his suicide in 1945.<br> He rose to power as the leader of the Nazi Party, becoming the chancellor of Germany in 1933 and then taking the title of Führer und Reichskanzler in 1934.</p>
+  </div>
+  <div id="tabs-2">
+    <p>Benjamin "Bibi" Netanyahu is an Israeli politician and diplomat who has served as prime minister of Israel since 2022.<br> Having previously held office from 1996 to 1999 and from 2009 to 2021, Netanyahu is Israel's longest-serving prime minister. </p>
+  </div>
+  <div id="tabs-3">
+    <p>Jeffrey Edward Epstein was an American financier and child sex offender.<br> He began his career as a math teacher at the Dalton School in New York City, before entering the banking and finance sector.</p>
+  </div>
+
+    <script>
+        $(document).ready(function() {
+            $("#tabs").tabs();
+        });
+    </script>
+</body>
+</html>
