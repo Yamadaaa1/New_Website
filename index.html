@@ -1,40 +1,110 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Menu - Jethro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Jethro A. Rosales</title>
+    <link rel="stylesheet" href="menuStyle.css">
+
     <style>
-        h1 {
-            color: #003366;
-            margin-bottom: 5px;
+        body {
+            margin: 0;
+            background-color: #FFF8F8;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .hero {
+            background-color: #B71C1C;
+            color: white;
             text-align: center;
         }
 
-        h2 {
-            color: #555;
-            margin-top: 0;
-            margin-bottom: 30px;
-            text-align: center;
+        .hero h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
         }
-        
+
+        .hero h2 {
+            font-size: 20px;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        .main-content {
+            max-width: 850px;
+            margin: 35px auto;
+            padding: 0 20px;
+            line-height: 1.7;
+        }
+
+        .main-content h2 {
+            color: #B71C1C;
+            border-bottom: 2px solid #FFCDD2;
+            padding-bottom: 8px;
+            margin-top: 30px;
+        }
+
+        .main-content p {
+            margin-bottom: 20px;
+        }
+
+        .welcome {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
     </style>
-    <link rel="stylesheet" href="menuStyle.css">
 </head>
-</head>
+
 <body>
+
     <nav class="navbar" role="navigation" aria-label="Main Navigation">
         <ul class="nav-list">
-        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
     </nav>
-    <center>
-        <h1>Jethro A Rosales</h1>
-        <h2>12-Cooper</h2>
-    </center>
+
+    <div class="hero">
+        <h1>Jethro A. Rosales</h1>
+        <h2>Grade 12 - Cooper</h2>
+        <p>Welcome to My Personal Website</p>
+    </div>
+
+    <div class="main-content">
+
+        <div class="welcome">
+            <h2>Welcome to My Website</h2>
+            <p>
+                Hello! I am Jethro A. Rosales from Section 12-Cooper.
+                This website is where I share my personal background,
+                showcase my projects, and display some of my favorite photographs.
+            </p>
+        </div>
+
+        <h2>About This Site</h2>
+        <p>
+            This website have different pages that showcase
+            information about me and my work. You can visit the About
+            page to learn more about me, explore my photos in the Gallery,
+            and view my projects in the Portfolio.
+        </p>
+
+        <h2>Get in Touch</h2>
+        <p>
+            If you have questions, suggestions, or feedback about my
+            projects, feel free to visit the Contact page.
+            I would be happy to hear from you!
+        </p>
+
+    </div>
+
     <footer class="footer">
       <div class="footer-content">
         <div class="footer-text">
@@ -58,5 +128,7 @@
 
       <div class="footer-bottom">
         <p>©2026 Niggers Corp</p>
+      </div>
+    </footer>
 </body>
 </html>
