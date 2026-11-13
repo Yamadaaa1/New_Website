@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Methods Demonstration</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        button {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+
+        .box-container {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .base-box {
+            background-color: green;
+            height: 200px;
+            width: 200px;
+            position: relative;
+        }
+
+        .fade-box {
+            width: 50px;
+            height: 50px;
+            display: none;
+            margin-top: 5px;
+        }
+
+        #d1 { background-color: lightgreen; }
+        #d2 { background-color: green; }
+        #d3 { background-color: orange; }
+        #d4 { background-color: yellow; }
+
+        .highlight {
+            background-color: darkgreen !important;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            
+            $("h1").hover(
+                function () {
+                    $(this).css("color", "green");
+                },
+                function () {
+                    $(this).css("color", "black");
+                }
+            );
+
+            
+            $("#b1").click(function () {
+                $("#d1").delay("slow").fadeIn();
+                $("#d2").delay("fast").fadeIn();
+                $("#d3").delay(1000).fadeIn();
+                $("#d4").delay(4000).fadeIn();
+            });
+
+            
+            $("#b2").click(function () {
+                $("#box").animate({
+                    height: "300px",
+                    width: "300px"
+                }, {
+                    duration: 500,
+                    easing: "linear",
+                    complete: function () {
+                        $(this).after("<p class='status-msg'>Reaches to maximum height and width!</p>");
+                    }
+                });
+            });
+
+            
+            $("#b3").click(function () {
+                $(".base-box")
+                    .animate({ left: "+=100px" }, 1000)
+                    .animate({ top: "20px" }, 1000)
+                    .queue(function () {
+                        $(this).toggleClass("highlight").dequeue();
+                    })
+                    .animate({ left: "0px", top: "0px" }, 400);
+            });
+
+            
+            $("#b4").click(function () {
+                $("p").slideUp();
+            });
+
+            
+            $("#b5").click(function () {
+                $("p").fadeTo(300, 0, function () {
+                    alert("The fadeTo effect has finished!");
+                });
+            });
+
+           
+            $("#b6").click(function () {
+                $(".fade-box").hide();
+                $("p").show().css("opacity", 1);
+                $(".status-msg").remove();
+                $("#box").css({ height: "200px", width: "200px", left: "0px", top: "0px" }).removeClass("highlight");
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <h1>Negus Corp</h1>
+
+    <div class="controls">
+        <button id="b1">1. Fade in boxes</button>
+        <button id="b2">2. Animate box</button>
+        <button id="b3">3. Animate box slide </button>
+        <button id="b4">4. Text Up</button>
+        <button id="b5">5. Fade To Text</button>
+        <button id="b6">Reset All</button>
+    </div>
+
+    <div class="box-container">
+        <div id="box" class="base-box"></div>
+    </div>
+
+    <div id="d1" class="fade-box"></div>
+    <div id="d2" class="fade-box"></div>
+    <div id="d3" class="fade-box"></div>
+    <div id="d4" class="fade-box"></div>
+
+    <div class="text-container">
+        <p>Negus Corp</p>
+    </div>
+
+</body>
+</html>
