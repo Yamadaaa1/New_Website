@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas</title>
+
+    <style>
+      #myDrawing {
+        border: solid 2px #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+      }
+
+      body {
+        margin: 0;
+        height: 100vh;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(to bottom, #87ceeb, #253b50, #171d29);
+      }
+      #music {
+        padding: 10px 20px;
+        background-color: darkgreen;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <audio id="bg-music" loop>
+      <source src="Wham.mp3" type="audio/mpeg" />
+    </audio>
+
+    <button id="music">Play Music</button>
+
+    <canvas height="500" width="1000" id="myDrawing">
+      <h1>merry christmas</h1>
+    </canvas>
+
+    <script>
+      const canvas = document.getElementById("myDrawing");
+      const ctx = canvas.getContext("2d");
+      const music = document.getElementById("bg-music");
+      const musicButton = document.getElementById("music");
+
+      musicButton.addEventListener("click", function () {
+        if (music.paused) {
+          music.play();
+          musicButton.textContent = "Pause Music";
+        } else {
+          music.pause();
+          musicButton.textContent = "Play Music";
+        }
+      });
+
+      ctx.beginPath();
+      ctx.arc(800, 90, 40, 0, Math.PI * 2);
+      ctx.fillStyle = "#fff4c2";
+      ctx.fill();
+
+      drawCircles();
+
+      
+      ctx.beginPath();
+      ctx.moveTo(400, 50);
+      ctx.lineTo(380, 90);
+      ctx.lineTo(340, 100);
+      ctx.lineTo(380, 130);
+      ctx.lineTo(360, 170);
+      ctx.lineTo(440, 170);
+      ctx.lineTo(420, 130);
+      ctx.lineTo(470, 100);
+      ctx.lineTo(420, 90);
+      ctx.lineTo(400, 50);
+
+      ctx.fillStyle = "gold";
+      ctx.fill();
+      ctx.strokeStyle = "#fff2a8";
+      ctx.lineWidth = 4;
+      ctx.stroke();
+
+      //leaves 1
+      ctx.beginPath();
+      ctx.moveTo(360, 170);
+      ctx.lineTo(310, 240);
+      ctx.lineTo(490, 240);
+      ctx.lineTo(440, 170);
+      ctx.closePath();
+
+      ctx.fillStyle = "#087443";
+      ctx.fill();
+      ctx.strokeStyle = "#023d23";
+      ctx.lineWidth = 3;
+      ctx.stroke();
+
+      //leaves 2
+      ctx.beginPath();
+      ctx.moveTo(330, 240);
+      ctx.lineTo(290, 290);
+      ctx.lineTo(510, 290);
+      ctx.lineTo(470, 240);
+      ctx.closePath();
+
+      ctx.fillStyle = "#066238";
+      ctx.fill();
+      ctx.stroke();
+
+      //leaves 3
+      ctx.beginPath();
+      ctx.moveTo(310, 290);
+      ctx.lineTo(270, 340);
+      ctx.lineTo(530, 340);
+      ctx.lineTo(490, 290);
+      ctx.closePath();
+
+      ctx.fillStyle = "#07552f";
+      ctx.fill();
+      ctx.stroke();
+
+      //trunck
+      ctx.beginPath();
+      ctx.moveTo(370, 340);
+      ctx.lineTo(370, 450);
+      ctx.lineTo(430, 450);
+      ctx.lineTo(430, 340);
+
+      ctx.closePath();
+
+      ctx.fillStyle = "#79502b";
+      ctx.fill();
+      ctx.strokeStyle = "#392414";
+      ctx.stroke();
+
+      const colors = ["red", "yellow", "blue", "pink", "orange"];
+
+      for (let i = 0; i < 30; i++) {
+        const x = 310 + Math.random() * 180;
+        const y = 185 + Math.random() * 145;
+
+        ctx.beginPath();
+        ctx.arc(x, y, 5, 0, Math.PI * 2);
+        ctx.fillStyle = colors[Math.floor(Math.random() * colors.length)];
+        ctx.fill();
+
+        ctx.strokeStyle = "white";
+        ctx.lineWidth = 1;
+        ctx.stroke();
+      }
+
+      ctx.strokeStyle = "white";
+      ctx.lineWidth = 4;
+
+      ctx.beginPath();
+      ctx.moveTo(360, 170);
+      ctx.quadraticCurveTo(400, 185, 440, 170);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(310, 240);
+      ctx.quadraticCurveTo(400, 260, 490, 240);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(290, 290);
+      ctx.quadraticCurveTo(400, 310, 510, 290);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(270, 340);
+      ctx.quadraticCurveTo(400, 360, 530, 340);
+      ctx.stroke();
+
+      ctx.fillStyle = "#eaf6ff";
+      ctx.fillRect(0, 430, 1000, 70);
+
+      function drawCircles() {
+        for (let i = 0; i < 60; i++) {
+          const x = Math.random() * canvas.width;
+          const y = Math.random() * 420;
+          const radius = Math.random() * 3 + 1;
+
+          ctx.beginPath();
+          ctx.arc(x, y, radius, 0, Math.PI * 2);
+          ctx.fillStyle = "white";
+          ctx.fill();
+        }
+      }
+
+      ctx.font = "bold 40px Arial";
+      ctx.fillStyle = "white";
+      ctx.textAlign = "center";
+      ctx.fillText("Merry Christmas!", 750, 300);
+    </script>
+  </body>
+</html>
