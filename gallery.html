@@ -1,26 +1,114 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gallery</title>
-    <link rel="stylesheet" href="menuStyle.css">
-</head>
-<body>
+    <link rel="stylesheet" href="menuStyle.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+      .carousel {
+        width: 90%;
+        max-width: 650px;
+        margin: 30px auto;
+        text-align: center;
+      }
+
+      .slides {
+        position: relative;
+        background: #222;
+        height: 400px;
+        overflow: hidden;
+        border-radius: 8px;
+      }
+
+      .slide {
+        display: none;
+        height: 100%;
+        margin: 0;
+      }
+
+      .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .buttons {
+        margin-top: 15px;
+      }
+
+      .buttons button {
+        background: #b71c1c;
+        color: white;
+        border: none;
+        padding: 10px 16px;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+
+      .buttons button:hover {
+        background: #e53935;
+      }
+
+      #slide-number {
+        margin: 0 15px;
+      }
+    </style>
+  </head>
+  <body>
     <nav class="navbar" role="navigation" aria-label="Main Navigation">
-        <ul class="nav-list">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
-            <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
+      <ul class="nav-list">
+        <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="gallery.html">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="portfolio.html">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
     </nav>
-    <center>
-        <h1>Gallery</h1>
-        <p>Welcome to my gallery!</p>
-        
-    </center>
+
+    <div class="carousel" id="carousel">
+      <div class="slides">
+        <figure class="slide">
+          <img src="gallery/future.jpg" alt="Gallery image 1" />
+        </figure>
+        <figure class="slide">
+          <img src="gallery/me.jpg" alt="Gallery image 2" />
+        </figure>
+        <figure class="slide">
+          <img src="gallery/fam.jpg" alt="Gallery image 3" />
+        </figure>
+        <figure class="slide">
+          <img src="gallery/hob1.png" alt="Gallery image 4" />
+        </figure>
+        <figure class="slide">
+          <img src="gallery/hob2.png" alt="Gallery image 4" />
+        </figure>
+        <figure class="slide">
+          <img src="gallery/hob3.png" alt="Gallery image 4" />
+        </figure>
+        <figure class="slide">
+          <img src="gallery/friend.jpeg" alt="Gallery image 4" />
+        </figure>
+        <figure class="slide">
+          <img src="gallery/friends.jpeg" alt="Gallery image 4" />
+        </figure>
+      </div>
+      <div class="buttons">
+        <button id="previous" type="button">Previous</button>
+        <span id="slide-number">1 / 6</span>
+        <button id="next" type="button">Next</button>
+      </div>
+    </div>
+
     <footer class="footer">
       <div class="footer-content">
         <div class="footer-text">
@@ -44,5 +132,35 @@
 
       <div class="footer-bottom">
         <p>©2026 Niggers Corp</p>
-</body>
+      </div>
+    </footer>
+
+    <script>
+      $(document).ready(function () {
+        let currentSlide = 0;
+        let slides = $(".slide");
+        let totalSlides = slides.length;
+
+        function showSlide(index) {
+          slides.hide();
+          slides.eq(index).fadeIn(300);
+          $("#slide-number").text(index + 1 + " / " + totalSlides);
+        }
+
+        $("#next").click(function () {
+          currentSlide++;
+          if (currentSlide >= totalSlides) currentSlide = 0;
+          showSlide(currentSlide);
+        });
+
+        $("#previous").click(function () {
+          currentSlide--;
+          if (currentSlide < 0) currentSlide = totalSlides - 1;
+          showSlide(currentSlide);
+        });
+
+        showSlide(currentSlide);
+      });
+    </script>
+  </body>
 </html>
