@@ -1,12 +1,75 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Contact - Jethro A. Rosales</title>
     <link rel="stylesheet" href="menuStyle.css">
+
+    <style>
+        body {
+            background-color: #fff8f8;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .contact-container {
+            max-width: 950px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #b71c1c;
+        }
+
+        .contact-container > h1,
+        .contact-container > p {
+            text-align: center;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 35px 0;
+        }
+
+        .contact-info div {
+            background: white;
+            padding: 25px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .contact-info h2 {
+            margin-top: 0;
+            font-size: 18px;
+        }
+
+        .contact-info p {
+            font-size: 20px;
+            margin-bottom: 0;
+        }
+
+        .contact-info a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            color: #b71c1c;
+            text-decoration: underline;
+        }
+
+    </style>
 </head>
+
 <body>
+
     <nav class="navbar" role="navigation" aria-label="Main Navigation">
         <ul class="nav-list">
             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
@@ -16,11 +79,38 @@
             <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
         </ul>
     </nav>
-    <center>
-        <h1>Contact</h1>
-        <p>Welcome to my contact page!<br>123456789</p>
-    </center>
-    <footer class="footer">
+
+    <main class="contact-container">
+
+        <h1>Contact Page</h1>
+        <p>Feel free to contact me through the following details.</p>
+
+        <section class="contact-info">
+
+            <div>
+                <h2>EMAIL ADDRESS</h2>
+                <p><a href="mailto:rosalesjethro3@gmail.com">rosalesjethro3@gmail.com</a></p>
+            </div>
+
+            <div>
+                <h2>FACEBOOK NAME</h2>
+                <p><a href="https://web.facebook.com/jethro.rosales.963" target="_blank">Jethro A. Rosales</a></p>
+            </div>
+
+            <div>
+                <h2>PHONE NUMBER</h2>
+                <p>+63 9#1 47## #61</p>
+            </div>
+
+            <div>
+                <h2>ADDRESS</h2>
+                <p>VILARDE VILLAGE</p>
+            </div>
+
+        </section>
+
+    </main>
+     <footer class="footer">
       <div class="footer-content">
         <div class="footer-text">
           <h3>Stay Connected!</h3>
@@ -43,5 +133,8 @@
 
       <div class="footer-bottom">
         <p>©2026 Niggers Corp</p>
+      </div>
+    </footer>
+
 </body>
 </html>
