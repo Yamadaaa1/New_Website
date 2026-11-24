@@ -1,157 +1,85 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About - Jethro A. Rosales</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Jethro A. Rosales</title>
+    <link rel="stylesheet" href="menuStyle.css">
 
-    <link rel="stylesheet" href="menuStyle.css" />
-    <link rel="stylesheet" href="about.css" />
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  </head>
+    <style>
+        body {
+            margin: 0;
+            background-color: #FFF8F8;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        .main-content {
+            max-width: 850px;
+            margin: 35px auto;
+            padding: 0 20px;
+            line-height: 1.7;
+        }
 
-  <body>
+        .main-content h2 {
+            color: #B71C1C;
+            border-bottom: 2px solid #FFCDD2;
+            padding-bottom: 8px;
+            margin-top: 30px;
+        }
+
+        .main-content p {
+            margin-bottom: 20px;
+        }
+
+        .welcome {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+    </style>
+</head>
+
+<body>
+
     <nav class="navbar" role="navigation" aria-label="Main Navigation">
-      <ul class="nav-list">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item">
-          <a class="nav-link active" href="about.html">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="gallery.html">Gallery</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="portfolio.html">Portfolio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact</a>
-        </li>
-      </ul>
+        <ul class="nav-list">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
     </nav>
-    <div class="about-header">
-      <h1>About Me</h1>
-      <p>Getting to know Jethro A. Rosales</p>
+
+    <div class="main-content">
+
+        <div class="welcome">
+            <h2>Welcome to My Website</h2>
+            <p>
+                Hello! I am Jethro A. Rosales from Section 12-Cooper.
+                This website is where I share my personal background,
+                showcase my projects, and display some of my favorite photographs.
+            </p>
+        </div>
+
+        <h2>About This Site</h2>
+        <p>
+            This website have different pages that showcase
+            information about me and my work. You can visit the About
+            page to learn more about me, explore my photos in the Gallery,
+            and view my projects in the Portfolio.
+        </p>
+
+        <h2>Get in Touch</h2>
+        <p>
+            If you have questions, suggestions, or feedback about my
+            projects, feel free to visit the Contact page.
+            I would be happy to hear from you!
+        </p>
+
     </div>
-    <div class="about-container">
-      <div class="about-box">
-        <div class="profile-img" style="background-image: url('image.png');"></div>
-
-        <div class="profile-info">
-          <h2>Hello! I'm Jethro.</h2>
-          <p>
-            I'm a Grade 12 student from Cooper. I enjoy watching movies,
-            K-dramas, and anime. I also spend some of my free time playing games
-            and exploring different interests.
-          </p>
-
-          <p>
-            <b>School:</b> Governor Juanito Reyes Remulla Senior High School
-          </p>
-          <p><b>Section:</b> 12 - Cooper</p>
-          <p><b>Strand:</b> TVL - ICT (Computer Programming)</p>
-        </div>
-      </div>
-      <h2 class="section-title">Get To Know Me</h2>
-
-      <div class="tabs">
-        <button class="tab-button active" data-tab="interests">
-          Interests
-        </button>
-        <button class="tab-button" data-tab="personality">Personality</button>
-        <button class="tab-button" data-tab="goals">My Goals</button>
-        <button class="tab-button" data-tab="hobby">Hobby</button>
-      </div>
-
-      <div class="tab-content">
-        <div class="tab-panel active" id="interests">
-          <h3>My Interests</h3>
-          <p>
-            I enjoy watching movies, Korean dramas, and anime. I also like
-            playing different kinds of games whenever I have free time.
-          </p>
-        </div>
-
-        <div class="tab-panel" id="personality">
-          <h3>My Personality</h3>
-          <p>
-            I'm kinda quiet if I don't know you. But once I'm comfortable with
-            you, I'm actually loud. Big ego frfr.
-          </p>
-        </div>
-
-        <div class="tab-panel" id="goals">
-          <h3>My Goals in Life</h3>
-          <p>
-            My main goal is to finish college and build a good future for
-            myself. One of the things I really want is to let my parents retire
-            and give back to them for everything they've done for me.
-          </p>
-        </div>
-
-        <div class="tab-panel" id="hobby">
-          <h3>Cooking for Fun</h3>
-          <p>
-            Aside from watching and playing games, I also enjoy cooking. It's
-            something I like doing during my free time.
-          </p>
-        </div>
-      </div>
-
-   
-     <h2 class="section-title">K-Dramas I've Watched</h2>
-<p class="section-description">
-  K-Dramas that i already finished watching
-</p>
-
-<div class="drama-carousel">
-      <div class="dramaslide">
-        <img class="dramaimg" src="posters/Doona.jfif" alt="Doona! Poster">
-        <h3>Doona!</h3>
-        <figcaption>Favorite</figcaption>
-      </div>
-
-      <div class="dramaslide">
-        <img class="dramaimg" src="posters/QOT.jfif" alt="Queen of Tears Poster">
-        <h3>Queen of Tears</h3>
-      </div>
-
-      <div class="dramaslide">
-        <img class="dramaimg" src="posters/Inyourradiantseason.jfif" alt="In Radiant Season Poster">
-        <h3>In Radiant Season</h3>
-      </div>
-
-      <div class="dramaslide">
-        <img class="dramaimg " src="posters/twlwm.webp" alt="Twinkling Watermelon Poster">
-        <h3>Twinkling Watermelon</h3>
-      </div>
-
-      <div class="dramaslide">
-        <img class="dramaimg" src="posters/mydemon.jfif" alt="My Demon Poster">
-        <h3>My Demon</h3>
-      </div>
-
-      <div class="dramaslide">
-        <img class="dramaimg" src="posters/businessproposal.jfif" alt="Business Proposal Poster">
-        <h3>Business Proposal</h3>
-      </div>
-
-      <div class="dramaslide">
-        <img class="dramaimg" src="posters/Bon_Appetit,_Your_Majesty.jpg" alt="Bon Appétit, Your Majesty Poster">
-        <h3>Bon Appétit, Your Majesty</h3>
-      </div>
-
-      <div class="dramaslide">
-        <img class="dramaimg" src="posters/Hearme.jfif" alt="Hear Me: Our Summer Poster">
-        <h3>Hear Me: Our Summer</h3>
-      </div>
-
-      <div class="carousel-buttons">
-        <button id="previous"> < Previous</button>
-        <span id="slide-number">1 / 8</span>
-        <button id="next">Next ></button>
-      </div>
-    </div>
-</div>
 
     <footer class="footer">
       <div class="footer-content">
@@ -178,56 +106,5 @@
         <p>©2026 Niggers Corp</p>
       </div>
     </footer>
-
-    
-    <script>
-      $(document).ready(function () {
-        
-        $(".tab-button").click(function () {
-          $(".tab-button").removeClass("active");
-          $(this).addClass("active");
-
-          $(".tab-panel").hide();
-
-          let tab = $(this).data("tab");
-
-          $("#" + tab).fadeIn(200);
-        });
-
-    
-        let currentSlide = 0;
-        let slides = $(".dramaslide");
-        let totalSlides = slides.length;
-
-        function showSlide(index) {
-          slides.hide();
-          slides.eq(index).fadeIn(200);
-
-          $("#slide-number").text(index + 1 + " / " + totalSlides);
-        }
-
-        $("#next").click(function () {
-          currentSlide++;
-
-          if (currentSlide >= totalSlides) {
-            currentSlide = 0;
-          }
-
-          showSlide(currentSlide);
-        });
-
-        $("#previous").click(function () {
-          currentSlide--;
-
-          if (currentSlide < 0) {
-            currentSlide = totalSlides - 1;
-          }
-
-          showSlide(currentSlide);
-        });
-
-        showSlide(currentSlide);
-      });
-    </script>
-  </body>
+</body>
 </html>
