@@ -1,6 +1,7 @@
+
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About - Jethro A. Rosales</title>
@@ -8,184 +9,204 @@
     <link rel="stylesheet" href="menuStyle.css" />
     <link rel="stylesheet" href="about.css" />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  </head>
+</head>
 
-  <body>
+<body>
     <nav class="navbar" role="navigation" aria-label="Main Navigation">
-      <ul class="nav-list">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item">
-          <a class="nav-link active" href="about.html">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="gallery.html">Gallery</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="portfolio.html">Portfolio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact</a>
-        </li>
-      </ul>
+        <ul class="nav-list">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
     </nav>
+
     <br>
+
     <main class="about-container">
-      <section class="about-box">
-        <div class="profile-img" style="background-image: url(photo.jfif)"></div>
-        <section class="profile-info">
-          <h2>Hello! I'm Jethro.</h2>
-          <p>I'm a Grade 12 student from Cooper. I enjoy watching movies, K-dramas, and anime. I also spend some of my free time playing games and exploring different interests.</p>
-          <p><b>School:</b> Governor Juanito Reyes Remulla Senior High School</p>
-          <p><b>Section:</b> 12 - Cooper</p>
-          <p><b>Strand:</b> TVL - ICT (Computer Programming)</p>
-        </section>
-      </section>
+        <section class="about-box">
+            <div class="profile-img" style="background-image: url(photo.jfif)"></div>
 
-      <section class="tab-area">
-        <h2 class="section-title">Get To Know Me</h2>
-        <div class="tabs">
-          <button class="tab-button active" data-tab="interests">Interests</button>
-          <button class="tab-button" data-tab="personality">Personality</button>
-          <button class="tab-button" data-tab="goals">My Goals</button>
-          <button class="tab-button" data-tab="hobby">Hobby</button>
-        </div>
-        <section class="tab-content">
-          <article class="tab-panel active" id="interests">
-            <h3>My Interests</h3>
-            <p>I enjoy watching movies, Korean dramas, and anime. I also like playing different kinds of games whenever I have free time.</p>
-          </article>
-          <article class="tab-panel" id="personality">
-            <h3>My Personality</h3>
-            <p>I'm kinda quiet if I don't know you. But once I'm comfortable with you, I'm actually loud. Big ego frfr.</p>
-          </article>
-          <article class="tab-panel" id="goals">
-            <h3>My Goals in Life</h3>
-            <p>My main goal is to finish college and build a good future for myself. One of the things I really want is to let my parents retire and give back to them for everything they've done for me.</p>
-          </article>
-          <article class="tab-panel" id="hobby">
-            <h3>Cooking for Fun</h3>
-            <p>Aside from watching and playing games, I also enjoy cooking. It's something I like doing during my free time.</p>
-          </article>
-        </section>
-      </section>
+            <section class="profile-info">
+                <h2>Hello! I'm Jethro.</h2>
 
-      <section class="drama-section">
-        <h2 class="section-title">K-Dramas I've Watched</h2>
-        <p class="section-description">K-Dramas that i already finished watching</p>
-        <div class="drama-carousel">
-          <article class="dramaslide">
-            <img class="dramaimg" src="posters/Doona.jfif" alt="Doona! Poster" />
-            <h3>Doona!</h3><figcaption>Favorite</figcaption>
-          </article>
-          <article class="dramaslide">
-            <img class="dramaimg" src="posters/QOT.jfif" alt="Queen of Tears Poster" />
-            <h3>Queen of Tears</h3>
-          </article>
-          <article class="dramaslide">
-            <img class="dramaimg" src="posters/Inyourradiantseason.jfif" alt="In Radiant Season Poster" />
-            <h3>In Radiant Season</h3>
-          </article>
-          <article class="dramaslide">
-            <img class="dramaimg" src="posters/twlwm.webp" alt="Twinkling Watermelon Poster" />
-            <h3>Twinkling Watermelon</h3>
-          </article>
-          <article class="dramaslide">
-            <img class="dramaimg" src="posters/mydemon.jfif" alt="My Demon Poster" />
-            <h3>My Demon</h3>
-          </article>
-          <article class="dramaslide">
-            <img class="dramaimg" src="posters/businessproposal.jfif" alt="Business Proposal Poster" />
-            <h3>Business Proposal</h3>
-          </article>
-          <article class="dramaslide">
-            <img class="dramaimg" src="posters/Bon_Appetit,_Your_Majesty.jpg" alt="Bon Appétit, Your Majesty Poster" />
-            <h3>Bon Appétit, Your Majesty</h3>
-          </article>
-          <article class="dramaslide">
-            <img class="dramaimg" src="posters/Hearme.jfif" alt="Hear Me: Our Summer Poster" />
-            <h3>Hear Me: Our Summer</h3>
-          </article>
-          <div class="carousel-buttons">
-            <button id="previous">Previous</button>
-            <span id="slide-number">1 / 8</span>
-            <button id="next">Next</button>
-          </div>
-        </div>
-      </section>
+                <p class="profile-intro">
+                    I'm a Grade 12 student from Cooper. I enjoy watching movies,
+                    K-dramas, and anime. I also spend some of my free time
+                    playing games and exploring different interests.
+                </p>
+
+                <div class="profile-details">
+                    <p><b>School:</b> Governor Juanito Reyes Remulla Senior High School</p>
+                    <p><b>Section:</b> 12 - Cooper</p>
+                    <p><b>Strand:</b> TVL - ICT (Computer Programming)</p>
+                </div>
+            </section>
+        </section>
+
+        <section class="tab-area">
+            <h2 class="section-title">Get To Know Me</h2>
+
+            <div class="tabs">
+                <button class="tab-button active" data-tab="interests">Interests</button>
+                <button class="tab-button" data-tab="personality">Personality</button>
+                <button class="tab-button" data-tab="goals">My Goals</button>
+                <button class="tab-button" data-tab="hobby">Hobby</button>
+            </div>
+
+            <section class="tab-content">
+                <div class="tab-panel active" id="interests">
+                    <h3>My Interests</h3>
+                    <p>I enjoy watching movies, Korean dramas, and anime. I also like playing different kinds of games whenever I have free time.</p>
+                </div>
+
+                <div class="tab-panel" id="personality">
+                    <h3>My Personality</h3>
+                    <p>I'm kinda quiet if I don't know you. But once I'm comfortable with you, I'm actually loud. Big ego frfr.</p>
+                </div>
+
+                <div class="tab-panel" id="goals">
+                    <h3>My Goals in Life</h3>
+                    <p>My main goal is to finish college and build a good future for myself. One of the things I really want is to let my parents retire and give back to them for everything they've done for me.</p>
+                </div>
+
+                <div class="tab-panel" id="hobby">
+                    <h3>Cooking for Fun</h3>
+                    <p>Aside from watching and playing games, I also enjoy cooking. It's something I like doing during my free time.</p>
+                </div>
+            </section>
+        </section>
+
+        <section class="drama-section">
+            <h2 class="section-title">K-Dramas I've Watched</h2>
+            <p class="section-description">K-Dramas that i already finished watching</p>
+
+            <div class="drama-carousel">
+
+                <div class="dramaslide">
+                    <img class="dramaimg" src="posters/Doona.jfif" alt="Doona! Poster" />
+                    <h3>Doona!</h3>
+                    <figcaption>Favorite</figcaption>
+                </div>
+
+                <div class="dramaslide">
+                    <img class="dramaimg" src="posters/QOT.jfif" alt="Queen of Tears Poster" />
+                    <h3>Queen of Tears</h3>
+                </div>
+
+                <div class="dramaslide">
+                    <img class="dramaimg" src="posters/Inyourradiantseason.jfif" alt="In Radiant Season Poster" />
+                    <h3>In Radiant Season</h3>
+                </div>
+
+                <div class="dramaslide">
+                    <img class="dramaimg" src="posters/twlwm.webp" alt="Twinkling Watermelon Poster" />
+                    <h3>Twinkling Watermelon</h3>
+                </div>
+
+                <div class="dramaslide">
+                    <img class="dramaimg" src="posters/mydemon.jfif" alt="My Demon Poster" />
+                    <h3>My Demon</h3>
+                </div>
+
+                <div class="dramaslide">
+                    <img class="dramaimg" src="posters/businessproposal.jfif" alt="Business Proposal Poster" />
+                    <h3>Business Proposal</h3>
+                </div>
+
+                <div class="dramaslide">
+                    <img class="dramaimg" src="posters/Bon_Appetit,_Your_Majesty.jpg" alt="Bon Appétit, Your Majesty Poster" />
+                    <h3>Bon Appétit, Your Majesty</h3>
+                </div>
+
+                <div class="dramaslide">
+                    <img class="dramaimg" src="posters/Hearme.jfif" alt="Hear Me: Our Summer Poster" />
+                    <h3>Hear Me: Our Summer</h3>
+                </div>
+
+                <div class="carousel-buttons">
+                    <button id="previous">Previous</button>
+                    <span id="slide-number">1 / 8</span>
+                    <button id="next">Next</button>
+                </div>
+
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-text">
-          <h3>Stay Connected!</h3>
-          <p>
-            Thank you for visiting my website. Connect with me on social media
-            or reach out via email for collaborations and inquiries. Your
-            support and feedback are greatly appreciated.
-          </p>
+        <div class="footer-content">
+            <div class="footer-text">
+                <h3>Stay Connected!</h3>
+                <p>
+                    Thank you for visiting my website. Connect with me on social media
+                    or reach out via email for collaborations and inquiries. Your
+                    support and feedback are greatly appreciated.
+                </p>
+            </div>
+
+            <div class="footer-social">
+                <h3>Follow Me</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/">f</a>
+                    <a href="https://www.youtube.com/">▶</a>
+                    <a href="https://www.linkedin.com/">in</a>
+                </div>
+            </div>
         </div>
 
-        <div class="footer-social">
-          <h3>Follow Me</h3>
-          <div class="social-links">
-            <a href="https://www.facebook.com/">f</a>
-            <a href="https://www.youtube.com/">▶</a>
-            <a href="https://www.linkedin.com/">in</a>
-          </div>
+        <div class="footer-bottom">
+            <p>©2026</p>
         </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>©2026 Niggers Corp</p>
-      </div>
     </footer>
 
     <script>
-      $(document).ready(function () {
-        $(".tab-button").click(function () {
-          $(".tab-button").removeClass("active");
-          $(this).addClass("active");
+        $(document).ready(function () {
+            $(".tab-button").click(function () {
+                $(".tab-button").removeClass("active");
+                $(this).addClass("active");
 
-          $(".tab-panel").hide();
+                $(".tab-panel").hide();
 
-          let tab = $(this).data("tab");
+                let tab = $(this).data("tab");
 
-          $("#" + tab).fadeIn(200);
+                $("#" + tab).fadeIn(200);
+            });
+
+            let currentSlide = 0;
+            let slides = $(".dramaslide");
+            let totalSlides = slides.length;
+
+            function showSlide(index) {
+                slides.hide();
+                slides.eq(index).fadeIn(200);
+
+                $("#slide-number").text(index + 1 + " / " + totalSlides);
+            }
+
+            $("#next").click(function () {
+                currentSlide++;
+
+                if (currentSlide >= totalSlides) {
+                    currentSlide = 0;
+                }
+
+                showSlide(currentSlide);
+            });
+
+            $("#previous").click(function () {
+                currentSlide--;
+
+                if (currentSlide < 0) {
+                    currentSlide = totalSlides - 1;
+                }
+
+                showSlide(currentSlide);
+            });
+
+            showSlide(currentSlide);
         });
-
-        let currentSlide = 0;
-        let slides = $(".dramaslide");
-        let totalSlides = slides.length;
-
-        function showSlide(index) {
-          slides.hide();
-          slides.eq(index).fadeIn(200);
-
-          $("#slide-number").text(index + 1 + " / " + totalSlides);
-        }
-
-        $("#next").click(function () {
-          currentSlide++;
-
-          if (currentSlide >= totalSlides) {
-            currentSlide = 0;
-          }
-
-          showSlide(currentSlide);
-        });
-
-        $("#previous").click(function () {
-          currentSlide--;
-
-          if (currentSlide < 0) {
-            currentSlide = totalSlides - 1;
-          }
-
-          showSlide(currentSlide);
-        });
-
-        showSlide(currentSlide);
-      });
     </script>
-  </body>
+</body>
 </html>
