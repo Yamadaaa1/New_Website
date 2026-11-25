@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="menuStyle.css">
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             background-color: #FFF8F8;
@@ -15,47 +19,82 @@
             color: #333;
         }
 
-        .top {
-            background-color: #B71C1C;
-            color: white;
-            text-align: center;
+        .main-content {
+            max-width: 1100px;
+            margin: 45px auto;
+            padding: 0 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
         }
 
-        .top h1 {
-            font-size: 34px;
-            margin-bottom: 10px;
+
+        .welcome {
+            background: linear-gradient(135deg, #ffffff, #FFF0F0);
+            padding: 45px;
+            border-radius: 12px;
+            border-left: 6px solid #B71C1C;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 230px;
         }
 
-        .top h2 {
-            font-size: 20px;
-            font-weight: normal;
+        .welcome h1 {
+            color: #B71C1C;
+            font-size: 36px;
+            margin: 0 0 15px;
+        }
+
+        .welcome p {
+            font-size: 17px;
+            line-height: 1.8;
+            max-width: 750px;
             margin: 0;
         }
 
-        .main-content {
-            max-width: 850px;
-            margin: 35px auto;
-            padding: 0 20px;
-            line-height: 1.7;
+        .info-sections {
+            display: flex;
+            flex-direction: row;
+            gap: 25px;
+            align-items: stretch;
         }
 
-        .main-content h2 {
-            color: #B71C1C;
-            border-bottom: 2px solid #FFCDD2;
-            padding-bottom: 8px;
-            margin-top: 30px;
-        }
-
-        .main-content p {
-            margin-bottom: 20px;
-        }
-
-        .welcome {
+        .info-card {
+            flex: 1;
             background-color: white;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+            line-height: 1.8;
+            border: 1px solid #F5DADA;
+            transition: transform 0.3s, box-shadow 0.3s;
+
+            display: flex;
+            flex-direction: column;
         }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 18px rgba(183,28,28,0.12);
+        }
+
+        .info-card h2 {
+            color: #B71C1C;
+            font-size: 23px;
+            border-bottom: 2px solid #FFCDD2;
+            padding-bottom: 12px;
+            margin: 0 0 15px;
+        }
+
+        .info-card p {
+            margin: 0;
+            font-size: 15px;
+            line-height: 1.9;
+        }
+
+        /* Footer styles remain unchanged */
     </style>
 </head>
 
@@ -63,72 +102,103 @@
 
     <nav class="navbar" role="navigation" aria-label="Main Navigation">
         <ul class="nav-list">
-            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-            <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item">
+                <a class="nav-link active" href="index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="portfolio.html">Portfolio</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+            </li>
         </ul>
     </nav>
 
-    <div class="top">
-        <h1>Jethro A. Rosales</h1>
-        <h2>Grade 12 - Cooper</h2>
-        <p>Welcome to My Personal Website</p>
-    </div>
+    <main class="main-content">
 
-    <div class="main-content">
+        <section class="welcome">
+            <h1>Welcome to My Website!</h1>
 
-        <div class="welcome">
-            <h2>Welcome to My Website</h2>
             <p>
                 Hello! I am Jethro A. Rosales from Section 12-Cooper.
                 This website is where I share my personal background,
-                show my projects, and display some of my favorite photographs.
+                showcase my projects, and display some of my favorite photographs.
+                Feel free to explore and learn more about me!
             </p>
+        </section>
+
+        <div class="info-sections">
+
+           
+            <section class="info-card">
+                <h2>About This Site</h2>
+
+                <p>
+                    This website has different pages that showcase
+                    information about me and my work. You can visit the About
+                    page to learn more about me, explore my photos in the Gallery,
+                    and view my projects in the Portfolio.
+                </p>
+            </section>
+
+     
+            <section class="info-card">
+                <h2>Get in Touch</h2>
+
+                <p>
+                    If you have questions, suggestions, or feedback about my
+                    projects, feel free to visit the Contact page.
+                    I would be happy to hear from you!
+                </p>
+            </section>
+
         </div>
 
-        <h2>About This Site</h2>
-        <p>
-            This website have different pages that show
-            information about me and my work. You can visit the About
-            page to learn more about me, explore my photos in the Gallery,
-            and view my projects in the Portfolio.
-        </p>
+    </main>
 
-        <h2>Get in Touch</h2>
-        <p>
-            If you have questions, suggestions, or feedback about my
-            projects, feel free to visit the Contact page.
-            I would be happy to hear from you!
-        </p>
-
-    </div>
-
+    <!-- Footer -->
     <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-text">
-          <h3>Stay Connected!</h3>
-          <p>
-            Thank you for visiting my website. Connect with me on social media
-            or reach out via email for collaborations and inquiries. Your
-            support and feedback are greatly appreciated.
-          </p>
+
+        <div class="footer-content">
+
+            <div class="footer-text">
+                <h3>Stay Connected!</h3>
+
+                <p>
+                    Thank you for visiting my website. Connect with me on social media
+                    or reach out via email for collaborations and inquiries. Your
+                    support and feedback are greatly appreciated.
+                </p>
+            </div>
+
+            <div class="footer-social">
+                <h3>Follow Me</h3>
+
+                <div class="social-links">
+                    <a href="https://www.facebook.com/">f</a>
+                    <a href="https://www.youtube.com/">▶</a>
+                    <a href="https://www.linkedin.com/">in</a>
+                </div>
+            </div>
+
         </div>
 
-        <div class="footer-social">
-          <h3>Follow Me</h3>
-          <div class="social-links">
-            <a href="https://www.facebook.com/">f</a>
-            <a href="https://www.youtube.com/">▶</a>
-            <a href="https://www.linkedin.com/">in</a>
-          </div>
+        <div class="footer-bottom">
+            <p>©2026 Niggers Corp</p>
         </div>
-      </div>
 
-      <div class="footer-bottom">
-        <p>©2026 Niggers Corp</p>
-      </div>
     </footer>
+
+
 </body>
 </html>
